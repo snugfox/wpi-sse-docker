@@ -16,8 +16,8 @@ RUN set -eux; \
 
 RUN set -eux; \
 	apt-get update; \
-	apt-get install -y --no-install-recommends file gdb gdbserver less nano \
-		procps tmux wget xxd; \
+	apt-get install -y --no-install-recommends file gdb gdbserver less ltrace \
+		nano procps strace tmux wget xxd; \
 	rm -rf /var/lib/apt/lists/*
 
 ARG GEF_VERSION="2020.03-1"

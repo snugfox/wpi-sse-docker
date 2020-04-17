@@ -11,8 +11,8 @@ for opt in $(echo ${OPTS:-} | tr ";," " "); do
         no_aslr)
             no_aslr=1
             ;;
-        no_pwndbg)
-            sed -i '/^source\s\+\/opt\/pwndbg\/gdbinit\.py/d' /root/.gdbinit
+        no_gef)
+            sed -i '/^source\s\+\/root\/\.gdbinit-gef\.py/d' /root/.gdbinit
             ;;
         *)
             echo "error: unrecognized option $opt" 1>&2

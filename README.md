@@ -28,7 +28,7 @@ $ docker run -it -v "$(pwd):/root/workspace" snugfox/wpi-sse /bin/bash
 ```
 
 You can also specify runtime options (see [Container
-options](#container-options)):
+Options](#container-options)):
 ```console
 $ docker run -it -v "$(pwd):/root/workspace" -e OPTS="corefile,no_aslr" \
     --privileged snugfox/wpi-sse
@@ -39,7 +39,7 @@ You may also want to supply the `--rm` flag to automatically remove the
 container after it has exited.
 
 
-## Container options
+## Container Options
 The `wpi-sse` image accepts several runtime options through the `OPTS`
 environemtnal variable. The complete list of options include:
 - `corefile`: Enable the generation of corefiles with unlimited size. By

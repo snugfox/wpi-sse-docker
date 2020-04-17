@@ -9,9 +9,15 @@ RUN set -eux; \
 	dpkg --add-architecture i386; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends build-essential ca-certificates \
-		cmake file gdb gdbserver git less libc6:i386 libc6-dev:i386 libffi-dev \
-		libssl-dev libstdc++6:i386 nano procps python3 python3-dev python3-pip \
-		python3-setuptools tmux tzdata wget xxd; \
+		cmake git libc6:i386 libc6-dev:i386 libffi-dev libssl-dev \
+		libstdc++6:i386 python3 python3-dev python3-pip python3-setuptools \
+		tzdata; \
+	rm -rf /var/lib/apt/lists/*
+
+RUN set -eux; \
+	apt-get update; \
+	apt-get install -y --no-install-recommends file gdb gdbserver less nano \
+		procps tmux wget xxd; \
 	rm -rf /var/lib/apt/lists/*
 
 ARG GEF_VERSION="2020.03-1"

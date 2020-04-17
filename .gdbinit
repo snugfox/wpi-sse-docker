@@ -1,5 +1,4 @@
-source /opt/pwndbg/gdbinit.py
+source /root/.gdbinit-gef.py
 
 set disassembly-flavor intel
 set pagination off
-set history save off

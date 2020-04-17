@@ -49,8 +49,10 @@ environemtnal variable. The complete list of options include:
 - `no_aslr`\*: Disable address space layout randomization (ASLR) for all processes
   in the container. This option uses `setarch -R`, which has no effect on the
   host operating system.
-- `no_pwndbg`: Disable the pwndbg extension from loading in GDB. pwndbg can
-  still be loaded using the GDB command `source /opt/pwndbg/gdbinit.py`.
+- `no_gef`: Disable the GEF extension from loading in GDB. GEF can still be
+  loaded using the GDB command `source /root/.gdbinit-gef.py`.
 
-\* *Requires that container have extended privileges (`--privileged` in
+You can specify multiple options separated by space, comma, or semicolon.
+
+\* *Requires that the container have extended privileges (`--privileged` in
 Docker)*.

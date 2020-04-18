@@ -52,4 +52,4 @@ COPY .gdbinit /root/
 COPY docker-entrypoint.sh /usr/local/bin/
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD ["/usr/bin/tmux"]
+CMD ["/bin/bash"]

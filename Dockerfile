@@ -20,6 +20,9 @@ RUN set -eux; \
 		nano procps strace tmux wget xxd; \
 	rm -rf /var/lib/apt/lists/*
 
+ARG ANGR_VERSION="8.20.1.7"
+RUN pip3 install --no-cache-dir angr==${ANGR_VERSION}
+
 ARG GEF_VERSION="2020.03-1"
 ARG GEF_DOWNLOAD_URL="https://raw.githubusercontent.com/hugsy/gef/${GEF_VERSION}/gef.py"
 ARG GEF_DOWNLOAD_SHA="d9660b85f56b7f1325814edd661146135bc85ba633aae9c097cc42aed87b2edf"
@@ -45,6 +48,9 @@ RUN set -eux; \
 	apt-get update; \
 	apt-get install -f; \
 	rm -rf radare2.deb /var/lib/apt/lists/*
+
+ARG R2PIPE_VERSION="1.4.2"
+RUN pip3 install --no-cache-dir r2pipe==${R2PIPE_VERSION}
 
 COPY .gdbinit /root/
 

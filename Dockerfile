@@ -42,11 +42,10 @@ ARG KEYSTONE_ENGINE_VERSION="0.9.1-3"
 ARG ROPPER_VERSION="1.13.3"
 ARG UNICORN_VERSION="1.0.2rc3"
 RUN pip3 install --no-cache-dir angr==${ANGR_VERSION} \
-	pwntools==${PWNTOOLS_VERSION} r2pipe==${R2PIPE_VERSION} \
-	ropgadget==${ROPGADGET_VERSION} \
-	# Optional dependencies for GEF
 	capstone==${CAPSTONE_VERSION} keystone-engine==${KEYSTONE_ENGINE_VERSION} \
-	ropper==${ROPPER_VERSION} unicorn==${UNICORN_VERSION}
+	pwntools==${PWNTOOLS_VERSION} r2pipe==${R2PIPE_VERSION} \
+	ropgadget==${ROPGADGET_VERSION} ropper==${ROPPER_VERSION} \
+	unicorn==${UNICORN_VERSION}
 
 COPY .gdbinit /root/
 

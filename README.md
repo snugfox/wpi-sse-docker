@@ -7,6 +7,7 @@
 `wpi-sse` is an unofficial Docker image designed and customised for software
 security engineering at Worcester Polytechnic Institute. This includes a simple
 Debian-based environment with several common tools, such as GDB and Pwntools.
+For a complete list of included tools, see [Included Tools](#included-tools).
 
 
 ## Getting Started
@@ -56,3 +57,38 @@ You can specify multiple options separated by space, comma, or semicolon.
 
 \* *Requires that the container have extended privileges (`--privileged` in
 Docker)*.
+
+
+## Included Tools
+The image is based on Debian 10 (Buster). It includes i386 and amd64 libraries
+for the `libc6` and `libstdc++6` packages to support most applications for
+either architecture. Below lists additional exploit tools and utilities on top
+of the base image. Tools listed without a version represent the latest version
+available in the Debian 10 APT repositories.
+
+### Exploit Tools
+- Angr `8.20.1.7`
+- Capstone `4.0.1`
+- GDB
+- GEF `2020.03-1`
+- ltrace
+- Pwntools `4.0.1`
+- R2Pipe `1.4.2`
+- Radare2 `4.3.1`
+- ROPGadget `6.2`
+- Ropper `1.13.3`
+- strace
+- Unicorn `1.0.2rc3`
+
+### Utilities
+- CMake
+- file
+- GCC
+- Git
+- less
+- Nano
+- ps
+- Python 3
+- tmux
+- wget
+- xxd

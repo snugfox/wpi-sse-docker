@@ -67,15 +67,15 @@ of the base image. Tools listed without a version represent the latest version
 available in the Debian 10 APT repositories.
 
 ### Exploit Tools
-- Angr `8.20.1.7`
-- Capstone `4.0.1`
+- Angr `8.20.7.6`
+- Capstone `4.0.2`
 - GDB
-- GEF `2020.03-1`
+- GEF `2020.06`
 - ltrace
-- Pwntools `4.0.1`
+- Pwntools `4.2.1`
 - R2Pipe `1.4.2`
 - Radare2 `4.3.1`
-- ROPGadget `6.2`
+- ROPGadget `6.3`
 - Ropper `1.13.3`
 - strace
 - Unicorn `1.0.2rc3`

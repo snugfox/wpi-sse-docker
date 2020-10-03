@@ -15,9 +15,9 @@ RUN set -eux; \
 		tmux tzdata wget xxd; \
 	rm -rf /var/lib/apt/lists/*
 
-ARG GEF_VERSION="2020.03-1"
+ARG GEF_VERSION="2020.06"
 ARG GEF_DOWNLOAD_URL="https://raw.githubusercontent.com/hugsy/gef/${GEF_VERSION}/gef.py"
-ARG GEF_DOWNLOAD_SHA="d9660b85f56b7f1325814edd661146135bc85ba633aae9c097cc42aed87b2edf"
+ARG GEF_DOWNLOAD_SHA="da17690e2eed8a86e5b159fe24899bfc4698a0d7862c1d16cd570d42771d4818"
 RUN set -eux; \
 	wget -qO /root/.gdbinit-gef.py "${GEF_DOWNLOAD_URL}"; \
 	echo "${GEF_DOWNLOAD_SHA} /root/.gdbinit-gef.py" | sha256sum --quiet -c
@@ -33,12 +33,12 @@ RUN set -eux; \
 	apt-get install -f; \
 	rm -rf radare2.deb /var/lib/apt/lists/*
 
-ARG ANGR_VERSION="8.20.1.7"
-ARG PWNTOOLS_VERSION="4.0.1"
+ARG ANGR_VERSION="8.20.7.6"
+ARG PWNTOOLS_VERSION="4.2.1"
 ARG R2PIPE_VERSION="1.4.2"
-ARG ROPGADGET_VERSION="6.2"
-ARG CAPSTONE_VERSION="4.0.1"
-ARG KEYSTONE_ENGINE_VERSION="0.9.1-3"
+ARG ROPGADGET_VERSION="6.3"
+ARG CAPSTONE_VERSION="4.0.2"
+ARG KEYSTONE_ENGINE_VERSION="0.9.2"
 ARG ROPPER_VERSION="1.13.3"
 ARG UNICORN_VERSION="1.0.2rc3"
 RUN pip3 install --no-cache-dir angr==${ANGR_VERSION} \
